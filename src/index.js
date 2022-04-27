@@ -9,3 +9,4 @@ root.render(
   </React.StrictMode>
 );
 document.body.style.background = '#35363a';
+document.body.style.zoom = "250%";
