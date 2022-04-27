@@ -1,0 +1,19 @@
+.wrapper > * {
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    padding-top: 2em;
+    font-family: Helvetica, sans-serif;
+    color: white;
+}
+
+.title {
+    font-size: xx-large;
+    font-family: "Brush Script MT", sans-serif;
+}
+
+.todoList {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

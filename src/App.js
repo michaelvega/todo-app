@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import TodoList from './TodoList'
 import { v4 as uuidv4 } from 'uuid'
+import './App.css';
 
 const LOCAL_STORAGE_KEY = 'todoApp.todos'
 
@@ -42,13 +43,16 @@ function App() {
     }
 
     return (
-        <>
+        <div className={"wrapper"}>
+            <span className={"title"}>TODO List</span>
+            <div className={"todoList"}>
+                <input ref={todoNameRef} type = "text" />
+                <button onClick={handleAddTodo}>Add Todo </button>
+                <button onClick={handleClearTodo}>Clear Completed Todos</button>
+            </div>
             <TodoList todos={todos} toggleTodo={toggleTodo}/>
-            <input ref={todoNameRef} type = "text" />
-            <button onClick={handleAddTodo}>Add Todo </button>
-            <button onClick={handleClearTodo}>Clear Completed Todos</button>
-            <div>{todos.filter(todo => !todo.complete).length} Left to do</div>
-        </>
+            <span className={"leftTodo"}>{todos.filter(todo => !todo.complete).length} Left to do</span>
+        </div>
     );
 }
 
